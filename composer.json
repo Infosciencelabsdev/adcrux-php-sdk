@@ -1,0 +1,32 @@
+{
+    "name": "infoscience/adcrux-php-sdk",
+    "type": "library",
+    "description": "Adcrux PHP-SDK",
+    "keywords": [
+        "adcrux"
+    ],
+    "homepage": "https://www.adcrux.io",
+    "license": "MIT",
+    "authors": [{
+        "name": "infoscience",
+        "email": "support@infoscience.co"
+    }],
+    "require": {
+        "php": ">=5.2"
+    },
+    "autoload": {
+        "files": [
+            "AdcruxApi/autoload.php"
+        ]
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^0.12.9",
+        "phpunit/phpunit": "^7.5",
+        "friendsofphp/php-cs-fixer": "^2.15"
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit",
+        "fix-style": "./vendor/bin/php-cs-fixer fix .",
+        "analyse": "./vendor/bin/phpstan analyse . -c phpstan.neon --level max --memory-limit=-1"
+    }
+}
